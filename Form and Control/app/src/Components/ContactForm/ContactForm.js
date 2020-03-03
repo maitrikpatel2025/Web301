@@ -1,11 +1,16 @@
 import React,{useState} from 'react'; 
+import Input from '../Input/Input';
 
 const ContactForm = (props) => {
 
     //states
     const[name,setName] = useState('');
+    const[nameError,setNameError] = useState(null);
+
     const[email,setEmail] = useState('');
+    const[ subject,setSubject]=useState('');
     const[message,setMessage] = useState('');
+
 
     //props
     const {title}=props;
@@ -14,12 +19,22 @@ const ContactForm = (props) => {
         //console.log(name);
         //console.log(email);
         //console.log(message);
-        const data ={
+        if(name===''){
+            // Create an error
+            setNameError('Invaild input');
+        }
+        else{
+            setNameError(null);
+        }
+
+       /* const data ={
             name, // ES6 for name: name,
             email,
+            subject,
             message,
         }
         console.log(data);
+        */
     }
  return(
      <div className="ContactForm">
@@ -32,21 +47,32 @@ const ContactForm = (props) => {
                                 type="text"
                                 id="name" 
                                 className="form-control"
-                                placeholder="Name"
                                 value={name}
                                 onChange={(event) => {
                                     setName(event.target.value);
                                     }}/>
+                             <div className="ErrorMessage">{nameError}</div> 
                     </div>
                     <div className="from-group">
                         <label htmlFor="email">Email</label>
-                            <input 
+                           <Input
                                 type="email" 
                                 id="email" 
                                 className="form-control"
                                 value={email}
                                 onChange={(event) => {
                                     setEmail(event.target.value);
+                                    }}/>
+                    </div>
+                    <div className="from-group">
+                        <label htmlFor="Subject">Subject</label>
+                           <Input 
+                                type="subject" 
+                                id="Subject" 
+                                className="form-control"
+                                value={subject}
+                                onChange={(event) => {
+                                    setSubject(event.target.value);
                                     }}/>
                     </div>
                     <div className="from-group">
@@ -75,3 +101,5 @@ const ContactForm = (props) => {
  )
 }
 export default ContactForm;
+/* <ErrorForm
+id="Name value="Name"/>*/

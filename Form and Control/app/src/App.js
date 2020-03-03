@@ -7,7 +7,7 @@ function App() {
     <div className="Container">
       <h1>React From &amp; Controlled Components </h1>
       <hr></hr>
-      <ContactForm title=""/>
+      <ContactForm title="stay in touch"/>
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.caretButton {
+  border: 0;
+}
+
+.caretButton:focus {
+  outline: 0;
+}

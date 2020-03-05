@@ -11,7 +11,6 @@ function App() {
       <header className="App-header">
         <NavBar></NavBar>
         <CounterBox/>
-        <FromInput/>
       </header>
     </div>
   );

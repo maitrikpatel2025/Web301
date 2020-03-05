@@ -5,10 +5,9 @@ import './CaretButton.css';
 const CaretButton = (props) => {
   const { children, handleClick } = props;
   return (
-    <Button className="CaretButton" onClick={handleClick}>
+    <button class="ui blue button"  onClick={handleClick}>
       {children}
-    </Button>
-  );
+    </button>
+  )
 };
-
 export default CaretButton;

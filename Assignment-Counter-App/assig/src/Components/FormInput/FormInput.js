@@ -5,8 +5,11 @@ import  Button  from '@material-ui/core/Button';
 const FromInput = () =>{
     const[product,setProduct] = useState('');
     const[productError,setProductError] = useState(null);
+
     const handleSubmit =()=> {
+
         if(product===''){
+;
             setProductError('Invaild input');
         }
         else{
@@ -15,16 +18,18 @@ const FromInput = () =>{
     }
     return(
         <div className="Box">
-            <div class="form__group field">
-            <input type="text"
-                    class="form__field" 
+            <div className="form__group">
+            <div className="ui huge input focus">
+                    <input type="text" 
+                    placeholder="Product"                      
+                    classN="form__field" 
                     id='product' 
                     value={product}                   
                     onChange={(event) => {setProduct(event.target.value); }} required />
-                    <span class="highlight"></span><span class="bar"></span>
-                   <label>Name</label>
-                    <div className="ErrorMessage">{productError}</div> 
-                    </div>
+                    <button class="ui blue button" onClick={handleSubmit} >Save</button>
+           </div>
+           <div className="ErrorMessage" >{productError}</div>
+           </div>
         </div>
         )
 }

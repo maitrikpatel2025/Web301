@@ -4,19 +4,15 @@ import './CounterBox.css';
 import Number from './Number/Number';
 import FromInput from '../FormInput/FormInput';
 
-const CounterBox =()=>{
-    const [count, setCount] = useState('0')
-    return(
-        <div>
-             <div className="Counter_box">
-            <CaretButton className="CaretBtn" handleClick={() => {setCount(count + 1)}}>+</CaretButton>
-            <Number className="Number" count={count}/>
-            <CaretButton className="CaretBtn"handleClick={() => {setCount(count - 1)}} >-</CaretButton>
-            </div>
-            <CaretButton handleClick={()=>{setCount(count)}}> reset</CaretButton>
-            <FromInput 
-            onclick={() => {setCount({count:0})} }/>
-            </div>
-
-    )}
-    export default CounterBox;
+function Counter({initialCount}) {
+    const [count, setCount] = useState(initialCount);
+    return (
+      <>
+        Count: {count}
+        <button onClick={() => setCount(initialCount)}>Reset</button>
+        <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+        <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+      </>
+    );
+  }
+    export default Counter;

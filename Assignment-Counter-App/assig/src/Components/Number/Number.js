@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Number = (props) => {
-  const { Count } = props;
+  const { count } = props;
   return (
     <div className="">
       <span className="Number">
-      {Count}
+      {count}
       </span>
     </div>
   );

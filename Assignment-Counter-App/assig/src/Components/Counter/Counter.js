@@ -1,19 +1,27 @@
 import React,{useState} from 'react';
 import './Counter.css';
+import Button from '@material-ui/core/Button/Button'
 import Number from '../Number/Number';
-import CaretButton from '../CaretButton/CaretButton';
 
-const CounterBox =()=>{
-    const [count, setCount] = useState('');
+const Counter =()=>{
+    const [count, setCount] = useState(0);
+    
+    const Increament =() =>{setCount(count + 1)}
+    const Decrement =()=>{setCount(count - 1)}
+    const Reset =()=>{setCount(0)}
 
     return(
-        <div>
+        
             <div className="Counter_box">
-            <CaretButton className="CaretBtn" handleClick={() => {setCount(count + 1)}}>+</CaretButton>
+            <Button className="CaretBtn" onClick={Increament}>+</Button>
             <Number className="Number" count={count}/>
-            <CaretButton className="CaretBtn"handleClick={() => {setCount(count - 1)}} >-</CaretButton>
+            <Button className="CaretBtn" onClick={Decrement}>-</Button>
+            <div>
+            <Button className="CaretBtn" onClick={Reset}>reset</Button>
             </div>
-            <CaretButton handleClick={()=>{alert}}>reset</CaretButton>
             </div>
+    
+        
 
-    )}
+    );}
+    export default Counter;;

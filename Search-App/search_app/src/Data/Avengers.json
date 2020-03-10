@@ -1,0 +1,45 @@
+[{
+    "id":1,
+    "name":"Iron Man",
+    "SecretIdentity":"Tony",
+    "SuperPower": [
+        "Bill",
+        "Intel",
+        "repuls"
+    ],
+    "active": true
+    },
+    {
+    "id":2,
+    "name":"Captain",
+    "SecretIdentity":"Steve",
+    "SuperPower": [
+    "super",
+    "sheild",
+    "healing factor"
+        ],
+    "active": true
+    },
+    {
+     "id":3,
+     "name":"Hulk",
+      "SecretIdentity":"Dr",
+      "SuperPower": [
+       "big guys",
+       "Angry men",
+       "genius"
+        ],
+    "active": true
+    },
+    {
+    "id":4,
+    "name":"Thor",
+    "SecretIdentity":"odinson",
+    "SuperPower": [
+    "Hammer",
+    "Lightning",
+    "beer man"
+    ],
+    "active": true
+    }
+]

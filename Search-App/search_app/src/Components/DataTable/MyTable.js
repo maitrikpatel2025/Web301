@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from'prop-types';
-import hardCodedData from'../../Data/Avengers.json';
+//import data from'../../Data/Avengers.json';
 const MyTable =(props)=>{
     const {data}=props;
-    const mappedhardCodedData = hardCodedData.map((Avengers)=>{
+    const mappeddata = data.map((Avengers)=>{
        return Avengers.name;
     });
-    console.log(mappedhardCodedData);
+    console.log(mappeddata);
     
         return(
         <div>
-            <table class="table">
-                <thead>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
                     <tr>
                         <th> ID </th>
                         <th> Name</th>
@@ -21,7 +21,7 @@ const MyTable =(props)=>{
                     </tr>
                 </thead>
                 <tbody>
-                    {hardCodedData.map((Avengers)=>{
+                    {data.map((Avengers)=>{
                         return(
                             <tr>
                                 <td>{Avengers.id}</td>
@@ -39,12 +39,15 @@ const MyTable =(props)=>{
                     })}
                 </tbody>
             </table>
-         {//hardCodedData.map((Avengers)=>{
+         {//data.map((Avengers)=>{
                 //return <p>{Avengers.name}</p>;})
             }
         </div>
     )
 }
+MyTable.defaultProps ={
+  data:[],
+};
 MyTable.propTypes= {
     data: PropTypes.arrayOf(
         PropTypes.shape({}),)

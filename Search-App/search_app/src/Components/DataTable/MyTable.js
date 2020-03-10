@@ -10,8 +10,8 @@ const MyTable =(props)=>{
     
         return(
         <div>
-            <table class="table table-bordered">
-                <thead class="thead-dark">
+            <table className="table table-bordered">
+                <thead className="thead-dark">
                     <tr>
                         <th> ID </th>
                         <th> Name</th>
@@ -23,7 +23,7 @@ const MyTable =(props)=>{
                 <tbody>
                     {data.map((Avengers)=>{
                         return(
-                            <tr>
+                            <tr key={Avengers.id}>
                                 <td>{Avengers.id}</td>
                                 <td>{Avengers.name}</td>
                                 <td>{Avengers.SecretIdentity}</td>

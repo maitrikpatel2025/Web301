@@ -30,7 +30,7 @@ const MyTable =(props)=>{
                                 <td>
                                     <ul>
                                     {Avengers.SuperPower.map((power)=>{
-                                    return<li>{power}</li>})}
+                                    return<li key={power}>{power}</li>})}
                                     </ul>
                                 </td>
                                 <td>{Avengers.active ?'Yes':'No'}</td>

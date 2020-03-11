@@ -1,5 +1,5 @@
 
-.CaretButton{
+.CaretBtn{
     display: flex;
     position: absolute;
     align-items: center;
@@ -7,8 +7,7 @@
     justify-content:space-between;
     background: linear-gradient(to right, #6dd5ed, #2193b0);
     width: 80%;
-    height: 20%;
+    height: 25%;
     border-radius: 25px;
     overflow: auto;
-    
 }

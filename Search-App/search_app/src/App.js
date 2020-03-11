@@ -9,6 +9,7 @@ function App() {
     <h1>The Avengers</h1>
     <hr/>
     <DataTable/>
+    
     </div>
   );
 }

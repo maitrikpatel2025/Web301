@@ -1,47 +1,47 @@
 import React,{useState} from 'react';
-import TextField from '@material-ui/core/TextField';
 import './FormInput.css'
-import  Button  from '@material-ui/core/Button';
-const FromInput = () =>{
-    const[product,setProduct] = useState('');
-    const[productError,setProductError] = useState(null);
+import PropTypes from 'prop-types';
+import CaretButton from '../CaretButton/CaretButton'
 
-    const handleSubmit =()=> {
+const FormInput =(props)=>{ 
+    const {Reset} = props;
+    const [product,setProduct] = useState('');
+    const [error,setError] = useState(null);
 
+    const onSubmit =(e)=> {
+        e.preventDefault();
+        console.log(product)
         if(product===''){
-;
-            setProductError('Invaild input');
+            setError("invalid input");
         }
         else{
-            setProductError(null);
+            setError();
         }
-    }
+    }    
     return(
         <div className="Box">
+
             <div className="form__group">
-            <div className="ui huge input focus">
-                    <input type="text" 
-                    placeholder="Product"                      
-                    classN="form__field" 
-                    id='product' 
-                    value={product}                   
-                    onChange={(event) => {setProduct(event.target.value); }} required />
-                    <button class="ui blue button" onClick={handleSubmit} >Save</button>
-           </div>
-           <div className="ErrorMessage" >{productError}</div>
-           </div>
+            <div className="form-group">
+             <div className="input-group">
+            <input type="text " className="form-control" value={product} onChange={(e)=>setProduct(e.target.value)} />        
+            <div className="ip\input-group-append">
+            <CaretButton className="btn btn-primary" 
+             onClick={(e)=>onSubmit(e)}
+             Task={`${Reset}`}
+             Name="Save"
+            ></CaretButton>
+            </div>
+            <div>{error}</div>
         </div>
-        )
+        </div>
+        </div>
+        </div>
+
+    )
 }
-export default FromInput;            
-/*<div className="Text_Input" ><TextField variant="outlined" label="Product" /></div>
-<div className="Input" ><Button variant="contained" color="primary">
-    Save
-</Button>
-                            <button 
-                            type="button" 
-                            className="btn btn-success"
-                            onClick={handleSubmit}
-                         >Submit
-                        </button>
-</div>*/
+FormInput.propTypes={
+    onChange: PropTypes.func,
+}
+ 
+export default FormInput;

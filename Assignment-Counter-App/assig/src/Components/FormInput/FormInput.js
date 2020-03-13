@@ -26,11 +26,10 @@ const FormInput =(props)=>{
              <div className="input-group">
             <input type="text " className="form-control" value={product} onChange={(e)=>setProduct(e.target.value)} />        
             <div className="ip\input-group-append">
-            <CaretButton className="btn btn-primary" 
+            <button className="btn btn-primary" 
              onClick={(e)=>onSubmit(e)}
-             Task={`${Reset}`}
              Name="Save"
-            ></CaretButton>
+            ></button>
             </div>
             <div>{error}</div>
         </div>

@@ -24,3 +24,25 @@ font-style: normal;
 font-variant: small-caps;
 text-transform: uppercase
 }
+.Box{
+    width: 500px;
+    height: 90px; 
+    position: absolute;
+    top: 480px;
+    left: 80px;
+    justify-content: space-between;
+    -webkit-box-shadow: 5px 7px 16px -6px rgba(0,0,0,0.75);
+   -moz-box-shadow: 5px 7px 16px -6px rgba(0,0,0,0.75);
+   box-shadow: 5px 7px 16px -6px rgba(0,0,0,0.75);
+}
+.form__group{
+    
+ position: relative;
+ top: 30px;
+ left: 20px;
+}
+.error_message{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+}

@@ -1,23 +1,24 @@
 .ModalContainer {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 90%;
+    left: 78%;
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
   
   .ModalOverlay {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: rgba(0, 0, 0, 0);
+
   }
   
   .Modal {
-    background: #fff;
+    background:green;
+    border-radius: 10px;
+    color: white;
+    display: flex;
     width: 300px;
-    padding: 25px;
-    border-radius: 4px;
+    padding: 15px;
+    justify-content: space-between;
   }

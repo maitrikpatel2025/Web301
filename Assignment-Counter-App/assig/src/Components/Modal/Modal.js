@@ -7,17 +7,15 @@ const Modal = (props) => {
     console.log('The Modal component just finished rendering and useEffect runs.');
     setTimeout(() => {
       close();
-    }, 2000);
+    }, 3000);
   });
 
   return (
     <div className="ModalContainer">
       <div className="ModalOverlay">
         <div className="Modal">
-          <h3>Modal</h3>
-          <p>Item update</p>
-          <hr/>
-          <button className="btn btn-default" onClick={close}>Close</button>
+          <h3>Product Update</h3>
+          <button className="btn btn-default" onClick={close}><i class="close icon"></i></button>
         </div>
       </div>
     </div>

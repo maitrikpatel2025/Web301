@@ -11,7 +11,8 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "uuid": "^7.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

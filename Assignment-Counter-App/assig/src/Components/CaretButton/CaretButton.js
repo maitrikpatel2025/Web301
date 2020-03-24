@@ -10,8 +10,8 @@ const CaretButton =(props)=>{
         <div>
             <Button
               onClick={Task}>
-             <i className={`angle ${Arrow} icon huge`}></i>
-             {Name}
+                <i className={`angle ${Arrow} icon huge`}></i>
+                 {Name}
              </Button>
          </div>
         

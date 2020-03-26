@@ -32,7 +32,7 @@ const ProductList =()=>{
                     })}
                 </tbody>
             </table>
-            <button onClick={additem}>submit</button>
+            
          </div>
         
 

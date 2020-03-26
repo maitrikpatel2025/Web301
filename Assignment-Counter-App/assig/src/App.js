@@ -7,6 +7,7 @@ import ProductList from './Components/ProductList/ProductList';
 
 
 function App() {
+   
   return (
     <div className="App">
       <header className="App-header">
@@ -14,6 +15,7 @@ function App() {
       </header>
       <div><CounterBox/></div>
       <div><ProductList/></div>
+
       
     </div>
   );

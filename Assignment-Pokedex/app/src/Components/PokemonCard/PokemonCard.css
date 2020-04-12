@@ -13,3 +13,7 @@
 .container {
   padding: 2px 16px;
 }
+.Poke_name{
+  text-align: center;
+  text-transform: capitalize;
+}

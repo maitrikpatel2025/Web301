@@ -21,7 +21,8 @@ const PokemonList = () => {
               <PokemonCard
               key={pokemon.name}
               Name = {pokemon.name}
-              URL ={pokemon.url}/>
+              url ={pokemon.url}
+              Id= {pokemon.id}/>
             ))}
           </div>
         ) : (

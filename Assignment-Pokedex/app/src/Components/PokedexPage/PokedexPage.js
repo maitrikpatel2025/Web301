@@ -3,6 +3,7 @@ import "./PokedexPage.css";
 import PokemonList from "../PokemonList/PokemonList";
 
 const PokedexPage = () => {
+    
  return(
      <div className="row">
          <div className="col">

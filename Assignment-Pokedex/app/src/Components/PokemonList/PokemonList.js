@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import axios from "axios";
 import "./PokemonList.css";
 import PokemonCard from "../PokemonCard/PokemonCard";
+import PokemonDetails from "../PokemonDetails/PokemonDetails";
 
 const PokemonList = () => {
    
@@ -11,8 +12,9 @@ const PokemonList = () => {
         axios.get('https://pokeapi.co/api/v2/pokemon?limit=151')
              .then(res => {setPokemon(res.data['results'])
             })},[])
+    
 
-    console.log(pokemon);
+    
     return (
         <div>
         {pokemon ? (
